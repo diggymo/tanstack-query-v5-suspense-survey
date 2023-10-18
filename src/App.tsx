@@ -21,9 +21,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Suspense fallback={<p>読み込み中</p>}>
-        <>
-          <GithubRepository repository="TanStack/query" />
-        </>
+        <GithubRepository repository="TanStack/query" />
       </Suspense>
     </QueryClientProvider>
   );
@@ -45,7 +43,7 @@ const GithubRepository = ({ repository }: { repository: string }) => {
       <h3>{data.full_name}</h3>
       <ul>
         <li>id: {data.id}</li>
-        <li>name: {data.id}</li>
+        <li>name: {data.name}</li>
       </ul>
       <img src={data.owner.avatar_url} />
     </div>
